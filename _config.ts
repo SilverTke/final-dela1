@@ -9,8 +9,21 @@ const site = lume();
 site.use(unocss({
   cssFile: "assets/css/uno.css",
   options: {
+    theme: {
+      colors: {
+        "secondary": "var(--color-secondary)",
+        primary: "var(--color-primary)",
+      },
+    },
     presets: [
-      () => presetWind4({ prefix: "tw-" }),
+      () =>
+        presetWind4({
+          prefix: "tw-",
+          dark: {
+            dark: '[data-theme="sunset"]',
+            light: '[data-theme="light"]',
+          },
+        }),
       () =>
         presetIcons({
           collections: {
@@ -29,6 +42,7 @@ site.use(unocss({
     ],
   },
 }));
+
 site.add("assets");
 
 export default site;

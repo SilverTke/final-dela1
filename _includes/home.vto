@@ -1,8 +1,36 @@
 {{set content}}
-<header class="hero tw-bg-teal-100 tw-min-h-64">
-  <div class="hero-content tw-text-center">
-    <h1 class="tw-text-5xl tw-font-bold">Sofía</h1>
-  </div>
+<header class="hero bg-base-200 tw-min-h-64">
+  <div class="hero-content tw-text-center tw-flex tw-flex-col">
+    <h1 class="tw-text-5xl tw-font-bold">{{hero.title}}</h1>
+    <p class="tw-text-3xl">{{hero.subtitle}}</p>
+
+  </div> 
 </header>
+<div class="tw-m-4"
+ <section id="about" class="tw-text-xl tw-mt-4">
+    <h1 class="tw-text-3xl text-primary tw-font-bold">Sobre mí</h1>
+    {{about}}
+ </section>
+ <section id="history" class="tw-text-xl tw-my-4">
+    <h1 class="tw-text-3xl text-primary tw-font-bold">Historia</h1>
+    {{history}}
+ </section>
+ <section id="portfolio" class="tw-text-xl tw-my-4">
+    <h1 class="tw-text-3xl text-primary tw-font-bold">Portafolio</h1>
+    <div class="tw-flex tw-flex-col md:tw-text-row">
+      {{for project of portfolio}}
+      <div class="card tw-rounded-sm bg-base-200 tw-min-h-32 md:tw-max-w-1/4 tw-p-4">
+        <div class="card-body">
+          <h2 class="card-title text-primary tw-text-xl tw-font-bold">{{project.title}}</div>
+          <p>{{project.text}}</p>
+          <div class="card-actions">
+           <a class="btn btn-primary tw-p-4" href="{{project.link}}">Link al repositorio</a> 
+          </div>
+        </div>
+      </div>
+      {{/for}}
+    </div>
+ </section>
+ </div>
 {{/set}}
 {{include "base.vto"}}

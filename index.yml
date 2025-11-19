@@ -1,1 +1,17 @@
 layout: home.vto
+title: Portafolio
+hero:
+  title: Sofía
+  subtitle: Novata, pero doy lo mejor de mí
+about: |
+  <p>¡Hola! Soy Sofía. Desde que era muy pequeña me vengo interesando en esto de la programación.
+  Debido a que dejé el colegio muy recientemente, no tengo demasiada experiencia, pero siempre trabajo para tener más</p>
+
+history: |
+  <p>Empecé a programar más o menos a los 9. De ahí en adelante, he estado mejorando de manera autodidacta.
+  Actualmente estoy haciendo un curso de desarrollo full stack.</p>
+
+portfolio:
+  - title: CV Git
+    text: Un CV para el desafío de Git
+    link: https://github.com/SilverTke/cv-dela
