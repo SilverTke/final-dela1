@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>{{title}}</title>
-		<link href="/assets/css/uno.css" rel="stylesheet">
+		<link href="{{"/assets/css/uno.css" |> url}}" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/combine/npm/daisyui@5/daisyui.css,npm/daisyui@5/theme/sunset.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
@@ -33,6 +33,6 @@
     <main>
     {{content}}
     </main>
-    <script src="/assets/js/helper.js"></script>
+    <script src="{{"/assets/js/helper.js" |> url}}"></script>
 	</body>
 </html>

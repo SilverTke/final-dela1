@@ -4,7 +4,9 @@ import { presetWind4 } from "unocss/preset-wind4";
 import { presetIcons } from "unocss/preset-icons";
 import { presetWebFonts } from "unocss/preset-web-fonts";
 
-const site = lume();
+const site = lume({
+  location: new URL("https://silvertke.github.io/final-dela1"),
+});
 
 site.use(unocss({
   cssFile: "assets/css/uno.css",
