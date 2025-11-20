@@ -15,6 +15,7 @@ site.use(unocss({
       colors: {
         "secondary": "var(--color-secondary)",
         primary: "var(--color-primary)",
+        "primary-content": "var(--color-primary-content)",
       },
     },
     presets: [
