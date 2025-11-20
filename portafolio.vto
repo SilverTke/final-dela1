@@ -1,0 +1,27 @@
+---
+layout: base.vto
+projects: 
+  - name: Cuppon
+    img: /assets/img/cuppon.png
+    description: Página de venta hecha para el desafío de Bootstrap
+  - name: CV Git
+    img: /assets/img/cv-git.png
+    description: Un CV hecho para el desafío de Git
+---
+<div class="tw-flex tw-flex-col tw-items-center tw-gap-4 tw-mx-4 lg:tw-mx-0">
+<h1 class="tw-text-center tw-text-5xl text-primary">Portafolio</h1>
+<p>Mi portafolio con todo lo que he hecho hasta ahora en el curso</p>
+<div class="tw-flex tw-flex-col lg:tw-flex-row tw-gap-4">
+{{for project of projects}}
+  <div class="card tw-min-h-64 bg-base-200">
+  {{if project.img}}
+  <figure><img src="{{project.img |> url}}"></figure>
+  {{/if}}
+  <div class="card-body tw-p-4">
+    <h2 class="card-title tw-text-xl text-secondary">{{project.name}}</h2>
+    <p>{{project.description}}</p>
+  </div>
+  </div>
+{{/for}}
+</div>
+</div>

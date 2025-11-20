@@ -15,22 +15,6 @@
     <h1 class="tw-text-3xl text-primary tw-font-bold">Historia</h1>
     {{history}}
  </section>
- <section id="portfolio" class="tw-text-xl tw-my-4">
-    <h1 class="tw-text-3xl text-primary tw-font-bold">Portafolio</h1>
-    <div class="tw-flex tw-flex-col md:tw-text-row">
-      {{for project of portfolio}}
-      <div class="card tw-rounded-sm bg-base-200 tw-min-h-32 md:tw-max-w-1/4 tw-p-4">
-        <div class="card-body">
-          <h2 class="card-title text-primary tw-text-xl tw-font-bold">{{project.title}}</div>
-          <p>{{project.text}}</p>
-          <div class="card-actions">
-           <a class="btn btn-primary tw-p-4" href="{{project.link}}">Link al repositorio</a> 
-          </div>
-        </div>
-      </div>
-      {{/for}}
-    </div>
- </section>
- </div>
+</div>
 {{/set}}
 {{include "base.vto"}}

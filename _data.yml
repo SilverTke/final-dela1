@@ -1,3 +1,10 @@
 nav_items:
-  - text: Sobre mí
-    link: /
+  - text: Portafolio
+    link: /portafolio
+socials:
+  - text: Gitea
+    icon: simple-icons:gitea
+    link: https://git.silvertke.net
+  - text: GitHub
+    icon: simple-icons:github
+    link: https://github.com/SilverTke

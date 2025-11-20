@@ -32,6 +32,10 @@ site.use(unocss({
             "fa7-solid": () =>
               import("@icons/fa7-solid/icons.json", { with: { type: "json" } })
                 .then((i) => i.default),
+            "simple-icons": () =>
+              import("@icons/simple-icons/icons.json", {
+                with: { type: "json" },
+              }).then((i) => i.default),
           },
         }),
       () =>

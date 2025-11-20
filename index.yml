@@ -10,8 +10,3 @@ about: |
 history: |
   <p>Empecé a programar más o menos a los 9. De ahí en adelante, he estado mejorando de manera autodidacta.
   Actualmente estoy haciendo un curso de desarrollo full stack.</p>
-
-portfolio:
-  - title: CV Git
-    text: Un CV para el desafío de Git
-    link: https://github.com/SilverTke/cv-dela
