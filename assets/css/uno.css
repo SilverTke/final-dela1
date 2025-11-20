@@ -91,7 +91,8 @@
 }
 
 /* layer: properties */
-@supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))){*, ::before, ::after, ::backdrop{--un-shadow-opacity:100%;--un-bg-opacity:100%;}}
+@supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))){*, ::before, ::after, ::backdrop{--un-shadow-opacity:100%;--un-bg-opacity:100%;--un-text-opacity:100%;}}
+@property --un-text-opacity{syntax:"<percentage>";inherits:false;initial-value:100%;}
 @property --un-bg-opacity{syntax:"<percentage>";inherits:false;initial-value:100%;}
 @property --un-inset-ring-color{syntax:"*";inherits:false;}
 @property --un-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000;}
@@ -118,6 +119,8 @@
 .tw-text-3xl{font-size:var(--text-3xl-fontSize);line-height:var(--un-leading, var(--text-3xl-lineHeight));}
 .tw-text-5xl{font-size:var(--text-5xl-fontSize);line-height:var(--un-leading, var(--text-5xl-lineHeight));}
 .tw-text-xl{font-size:var(--text-xl-fontSize);line-height:var(--un-leading, var(--text-xl-lineHeight));}
+.tw-text-\[var\(--color-secondary-content\)\]{color:color-mix(in oklab, var(--color-secondary-content) var(--un-text-opacity), transparent);}
+.tw-text-primary-content{color:color-mix(in srgb, var(--color-primary-content) var(--un-text-opacity), transparent);}
 .tw-font-bold{--un-font-weight:var(--fontWeight-bold);font-weight:var(--fontWeight-bold);}
 .tw-m-4{margin:calc(var(--spacing) * 4);}
 .tw-mx-4{margin-inline:calc(var(--spacing) * 4);}
@@ -128,6 +131,7 @@
 .tw-px-1{padding-inline:calc(var(--spacing) * 1);}
 .tw-px-2{padding-inline:calc(var(--spacing) * 2);}
 .tw-px-4{padding-inline:calc(var(--spacing) * 4);}
+.tw-pb-4{padding-bottom:calc(var(--spacing) * 4);}
 .tw-text-center{text-align:center;}
 .hover\:tw-bg-\[var\(--color-info\)\]:hover{background-color:color-mix(in oklab, var(--color-info) var(--un-bg-opacity), transparent);}
 .tw-flex{display:flex;}
@@ -141,9 +145,11 @@
 .tw-shadow,
 .tw-shadow-sm{--un-shadow:0 1px 3px 0 var(--un-shadow-color, rgb(0 0 0 / 0.1)),0 1px 2px -1px var(--un-shadow-color, rgb(0 0 0 / 0.1));box-shadow:var(--un-inset-shadow), var(--un-inset-ring-shadow), var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);}
 .tw-shadow-\[var\(--color-base-300\)\]\/50{--un-shadow-color:color-mix(in oklab, var(--color-base-300) 50%, transparent);}
+.tw-shadow-primary{--un-shadow-color:color-mix(in srgb, var(--color-primary) var(--un-shadow-opacity), transparent);}
 .tw-items-center{align-items:center;}
 .tw-top-0{top:calc(var(--spacing) * 0);}
 .tw-sticky{position:sticky;}
+.tw-z-1{z-index:1;}
 @media (min-width: 64rem){
 .lg\:tw-mx-0{margin-inline:calc(var(--spacing) * 0);}
 .lg\:tw-flex{display:flex;}
