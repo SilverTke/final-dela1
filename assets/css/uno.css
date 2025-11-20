@@ -142,6 +142,7 @@
 .tw-shadow-sm{--un-shadow:0 1px 3px 0 var(--un-shadow-color, rgb(0 0 0 / 0.1)),0 1px 2px -1px var(--un-shadow-color, rgb(0 0 0 / 0.1));box-shadow:var(--un-inset-shadow), var(--un-inset-ring-shadow), var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);}
 .tw-shadow-\[var\(--color-base-300\)\]\/50{--un-shadow-color:color-mix(in oklab, var(--color-base-300) 50%, transparent);}
 .tw-items-center{align-items:center;}
+.tw-top-0{top:calc(var(--spacing) * 0);}
 .tw-sticky{position:sticky;}
 @media (min-width: 64rem){
 .lg\:tw-mx-0{margin-inline:calc(var(--spacing) * 0);}
